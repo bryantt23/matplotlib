@@ -28,9 +28,9 @@ class Watcher:
 class Handler(FileSystemEventHandler):
     @staticmethod
     def on_modified(event):
-        if event.src_path.endswith("rw_visual.py"):
+        if event.src_path.endswith("die_visual.py"):
             print(f"{event.src_path} has been modified, running script...")
-            subprocess.run(["python", "rw_visual.py"])
+            subprocess.run(["python", "die_visual.py"])
 
 
 if __name__ == '__main__':
